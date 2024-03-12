@@ -1,1 +1,1 @@
-# React Real Estate UI Design
+# Properties Renting Web built with React and SCSS
