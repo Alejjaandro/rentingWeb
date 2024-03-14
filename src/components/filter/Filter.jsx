@@ -64,7 +64,7 @@ function Filter({ filters }) {
             type="number"
             id="minPrice"
             name="minPrice"
-            defaultValue={filters.minPrice === null ? "" : filters.minPrice}
+            defaultValue={filters.minPrice === "null" ? "" : filters.minPrice}
             placeholder="All"
             onChange={(e) => updateFilters({ minPrice: e.target.value })}
           />
@@ -75,7 +75,7 @@ function Filter({ filters }) {
             type="text"
             id="maxPrice"
             name="maxPrice"
-            defaultValue={filters.maxPrice === null ? "" : filters.maxPrice}
+            defaultValue={filters.maxPrice === "null" ? "" : filters.maxPrice}
             placeholder="All"
             onChange={(e) => updateFilters({ maxPrice: e.target.value })}
           />

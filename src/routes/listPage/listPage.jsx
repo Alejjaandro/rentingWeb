@@ -21,7 +21,7 @@ function ListPage() {
 
   const filteredData = data.filter((item) => {
     if (filters.type && item.type !== filters.type) return false;
-    if (filters.location && item.location !== filters.location) return false;
+    if (filters.location && item.location !== filters.location.toLocaleLowerCase()) return false;
     if (filters.minPrice && item.price < filters.minPrice) return false;
     if (filters.maxPrice && item.price > filters.maxPrice) return false;
     if (filters.bedroom && item.bedroom != filters.bedroom) return false;

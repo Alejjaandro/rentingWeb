@@ -16,7 +16,6 @@ function SearchBar() {
 
   const searchProperties = (e) => {
     e.preventDefault();
-    
     // Navigate to the list page
     if(query.location === null && query.minPrice === null && query.maxPrice === null) {
       return navigate("/list?type="+query.type)
