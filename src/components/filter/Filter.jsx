@@ -1,15 +1,29 @@
-import { useState } from "react";
 import "./filter.scss";
+import { useNavigate } from "react-router-dom";
 
-function Filter({type, location, minPrice, maxPrice}) {
+function Filter({ filters }) {
 
-  // const [filters, setFilters] = useState({type: type, location: location, minPrice: minPrice, maxPrice: maxPrice});
+  const navigate = useNavigate();
+
+  const updateFilters = (newFilters) => {
+    // Get the current search parameters from the URL
+    const currentSearchParams = new URLSearchParams(location.search);
+
+    // Update the search parameters with the new filters
+    Object.keys(newFilters).forEach(key => {
+      currentSearchParams.set(key, newFilters[key]);
+    });
+
+    // Update URL with the new search parameters without navigating away
+    navigate(`?${currentSearchParams.toString()}`, { replace: true });
+  };
+
   // console.log(filters);
 
   return (
     <div className="filter">
       <h1>
-        Search results for <b>{location === null ? "All" : location}</b>
+        Search results for <b>{filters.location === null ? "All" : filters.location}</b>
       </h1>
 
       <div className="top">
@@ -19,15 +33,16 @@ function Filter({type, location, minPrice, maxPrice}) {
             type="text"
             id="city"
             name="city"
-            defaultValue={location === null ? "" : location}
+            defaultValue={filters.location === null ? "" : filters.location}
             placeholder="City Location"
+            onChange={(e) => updateFilters({ location: e.target.value })}
           />
         </div>
       </div>
       <div className="bottom">
         <div className="item">
           <label htmlFor="type">Type</label>
-          <select name="type" id="type" defaultValue={type}>
+          <select name="type" id="type" defaultValue={filters.type} onChange={(e) => updateFilters({ type: e.target.value })}>
             <option value="">All</option>
             <option value="buy">Buy</option>
             <option value="rent">Rent</option>
@@ -49,8 +64,9 @@ function Filter({type, location, minPrice, maxPrice}) {
             type="number"
             id="minPrice"
             name="minPrice"
-            defaultValue={minPrice === null ? "" : minPrice}
+            defaultValue={filters.minPrice === null ? "" : filters.minPrice}
             placeholder="All"
+            onChange={(e) => updateFilters({ minPrice: e.target.value })}
           />
         </div>
         <div className="item">
@@ -59,8 +75,9 @@ function Filter({type, location, minPrice, maxPrice}) {
             type="text"
             id="maxPrice"
             name="maxPrice"
-            defaultValue={maxPrice === null ? "" : maxPrice}
+            defaultValue={filters.maxPrice === null ? "" : filters.maxPrice}
             placeholder="All"
+            onChange={(e) => updateFilters({ maxPrice: e.target.value })}
           />
         </div>
         <div className="item">
@@ -70,6 +87,8 @@ function Filter({type, location, minPrice, maxPrice}) {
             id="bedroom"
             name="bedroom"
             placeholder="All"
+            defaultValue={filters.bedroom === null ? "" : filters.bedroom}
+            onChange={(e) => updateFilters({ bedroom: e.target.value })}
           />
         </div>
 

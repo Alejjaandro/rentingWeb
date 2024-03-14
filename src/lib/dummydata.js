@@ -11,6 +11,7 @@ export const listData = [
       "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     ],
+    size: "85 m2",
     bedroom: 2,
     bathroom: 1,
     price: 1000,
@@ -23,7 +24,7 @@ export const listData = [
   {
     id: 2,
     type: "buy",
-    location: "london",
+    location: "birmingham",
     title: "An Awesome Apartment Near the Park! Almost too good to be true!",
     img: "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: [
@@ -32,10 +33,11 @@ export const listData = [
       "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     ],
+    size: "130 m2",
     bedroom: 3,
     bathroom: 2,
     price: 1500,
-    address: "789 Oxford Street, London",
+    address: "789 Oxford Street, Birmingham",
     latitude: 52.4862,
     longitude: -1.8904,
     description:
@@ -44,7 +46,7 @@ export const listData = [
   {
     id: 3,
     type: "rent",
-    location: "london",
+    location: "manchester",
     title: "A New Apartment in the City!",
     img: "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: [
@@ -53,10 +55,11 @@ export const listData = [
       "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     ],
+    size: "80 m2",
     bedroom: 1,
     bathroom: 1,
     price: 800,
-    address: "101 Baker Street, London",
+    address: "101 Baker Street, Manchester",
     latitude: 53.4808,
     longitude: -2.2426,
     description:
@@ -65,7 +68,7 @@ export const listData = [
   {
     id: 4,
     type: "buy",
-    location: "london",
+    location: "leeds",
     title: "Great Location! Great Price! Great Apartment!",
     img: "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: [
@@ -74,10 +77,11 @@ export const listData = [
       "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     ],
+    size: "70 m2",
     bedroom: 2,
     bathroom: 1,
     price: 1000,
-    address: "234 Kingsway, London,",
+    address: "234 Kingsway, Leeds",
     latitude: 53.8008,
     longitude: -1.5491,
     description:
@@ -86,7 +90,7 @@ export const listData = [
   {
     id: 5,
     type: "rent",
-    location: "london",
+    location: "liverpool",
     title: "Apartment 5",
     img: "https://images.pexels.com/photos/276625/pexels-photo-276625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: [
@@ -95,10 +99,11 @@ export const listData = [
       "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     ],
+    size: "110 m2",
     bedroom: 3,
     bathroom: 2,
     price: 1500,
-    address: "567 Victoria Road, London",
+    address: "567 Victoria Road, Liverpool",
     latitude: 53.4084,
     longitude: -2.9916,
     description:
@@ -107,7 +112,7 @@ export const listData = [
   {
     id: 6,
     type: "buy",
-    location: "london",
+    location: "new castle",
     title: "Apartment 6",
     img: "https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: [
@@ -116,10 +121,11 @@ export const listData = [
       "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     ],
+    size: "105 m2",
     bedroom: 1,
     bathroom: 1,
     price: 800,
-    address: "890 Regent Street, London",
+    address: "890 Regent Street, New Castle",
     latitude: 54.9783,
     longitude: -1.6174,
     description:
@@ -128,7 +134,7 @@ export const listData = [
   {
     id: 7,
     type: "rent",
-    location: "london",
+    location: "sheffield",
     title: "Apartment 7",
     img: "https://images.pexels.com/photos/2029667/pexels-photo-2029667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: [
@@ -137,10 +143,11 @@ export const listData = [
       "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     ],
+    size: "90 m2",
     bedroom: 2,
     bathroom: 1,
     price: 1000,
-    address: "112 Piccadilly, London",
+    address: "112 Piccadilly, Sheffield",
     latitude: 53.3811,
     longitude: -1.4701,
     description:
@@ -149,7 +156,7 @@ export const listData = [
   {
     id: 8,
     type: "buy",
-    location: "london",
+    location: "bristol",
     title: "Apartment 8",
     img: "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     images: [
@@ -158,10 +165,11 @@ export const listData = [
       "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/2467285/pexels-photo-2467285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     ],
+    size: "120 m2",
     bedroom: 3,
     bathroom: 2,
     price: 1500,
-    address: "8765 Main High Street, London",
+    address: "8765 Main High Street, Bristol",
     latitude: 51.4545,
     longitude: -2.5879,
     description:

@@ -68,7 +68,7 @@ function SinglePage() {
           <div className="sizes">
             <div className="size">
               <img src="/size.png" alt="" />
-              <span>80 m2</span>
+              <span>{propertyData.size}</span>
             </div>
             <div className="size">
               <img src="/bed.png" alt="" />
