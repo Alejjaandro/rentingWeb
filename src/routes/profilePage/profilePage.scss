@@ -39,6 +39,16 @@
           background-color: #fece51;
           cursor: pointer;
           border: none;
+
+        }
+
+        .logoutButton{
+          background-color: rgb(231, 3, 3);
+          color: white;
+          
+          & :hover{
+            background-color: rgb(150, 5, 5);
+          }
         }
       }
 

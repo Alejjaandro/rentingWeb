@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
 
-  const user = true;
+  const user = JSON.parse(localStorage.getItem("user"));
+  useEffect(() => {}, [user]);
+  
   return (
     <nav>
       <div className="left">
@@ -14,9 +16,9 @@ function Navbar() {
           <span>Renting Web</span>
         </a>
         <a href="/">Home</a>
+        <a href="/list">Properties</a>
         <a href="/">About</a>
         <a href="/">Contact</a>
-        <a href="/">Agents</a>
       </div>
       <div className="right">
         {user ? (
@@ -33,10 +35,8 @@ function Navbar() {
           </div>
         ) : (
           <>
-            <a href="/">Sign in</a>
-            <a href="/" className="register">
-              Sign up
-            </a>
+            <a href="/login">Sign in</a>
+            <a href="/register" className="register">Sign up</a>
           </>
         )}
         <div className="menuIcon">
@@ -48,11 +48,20 @@ function Navbar() {
         </div>
         <div className={open ? "menu active" : "menu"}>
           <a href="/">Home</a>
+          {user && (
+            <a href="/profile" className="profile">Profile</a>
+          )}
+
+          <a href="/list">Properties</a>
           <a href="/">About</a>
           <a href="/">Contact</a>
-          <a href="/">Agents</a>
-          <a href="/">Sign in</a>
-          <a href="/">Sign up</a>
+          
+          {!user && (
+            <>
+              <a href="/login">Sign in</a>
+              <a href="/register">Sign up</a>
+            </>
+          )}
         </div>
       </div>
     </nav>

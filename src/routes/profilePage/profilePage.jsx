@@ -2,11 +2,19 @@ import { listData } from "../../lib/dummydata";
 import Chat from "../../components/chat/Chat";
 import List from "../../components/list/List";
 import "./profilePage.scss";
+import { useNavigate } from "react-router-dom";
 
 function ProfilePage() {
+  const navigate = useNavigate();
+
   const data = listData;
   const propertiesToSell = data.filter((item) => item.type === "buy");
   const propertiesToRent = data.filter((item) => item.type === "rent");
+
+  const logout = () => {
+    localStorage.removeItem("user");
+    navigate("/");
+  }
 
   return (
     <div className="profilePage">
@@ -15,6 +23,7 @@ function ProfilePage() {
           <div className="title">
             <h1>User Information</h1>
             <button>Update Profile</button>
+            <button className="logoutButton" onClick={() => logout()}>Logout</button>
           </div>
           <div className="info">
             <span>
