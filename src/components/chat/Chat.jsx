@@ -16,8 +16,6 @@ function Chat() {
     setChat(true);
   }
 
-  // console.log(chat, chatUser.messages);
-
   return (
     <div className="chat">
       <div className="messages">
@@ -32,7 +30,7 @@ function Chat() {
                 alt=""
               />
               <span>{user.name}</span>
-              <p>Lorem ipsum dolor sit amet...</p>
+              <p>{user.messages[0].message}</p>
             </div>
           );
         })}

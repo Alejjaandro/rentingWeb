@@ -18,8 +18,6 @@ function Filter({ filters }) {
     navigate(`?${currentSearchParams.toString()}`, { replace: true });
   };
 
-  // console.log(filters);
-
   return (
     <div className="filter">
       <h1>
@@ -91,10 +89,6 @@ function Filter({ filters }) {
             onChange={(e) => updateFilters({ bedroom: e.target.value })}
           />
         </div>
-
-        <button>
-          <img src="/search.png" alt="" />
-        </button>
 
       </div>
     </div>
