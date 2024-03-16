@@ -16,7 +16,7 @@ function Navbar() {
           <span>Renting Web</span>
         </a>
         <a href="/">Home</a>
-        <a href="/list">Properties</a>
+        <Link to="/list">Properties</Link>
         <a href="/">About</a>
         <a href="/">Contact</a>
       </div>
@@ -35,8 +35,8 @@ function Navbar() {
           </div>
         ) : (
           <>
-            <a href="/login">Sign in</a>
-            <a href="/register" className="register">Sign up</a>
+            <Link to="/login">Sign in</Link>
+            <Link to="/register" className="register">Sign up</Link>
           </>
         )}
         <div className="menuIcon">
