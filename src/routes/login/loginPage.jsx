@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import './login.scss'
 
-function Login(){
+function LoginPage(){
 
   const navigate = useNavigate();
   let user
@@ -41,4 +41,4 @@ function Login(){
   )
 }
 
-export default Login
+export default LoginPage

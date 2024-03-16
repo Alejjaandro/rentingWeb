@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import './register.scss'
 
-function Register() {
+function RegisterPage() {
     const navigate = useNavigate();
     let user
   
@@ -42,4 +42,4 @@ function Register() {
     )
 }
 
-export default Register
+export default RegisterPage
