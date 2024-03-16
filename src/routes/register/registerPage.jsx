@@ -16,6 +16,7 @@ function RegisterPage() {
       // Save user in local storage
       localStorage.setItem('user', JSON.stringify(user));
       navigate('/');
+      window.location.reload();
   
       console.log(user)
     }

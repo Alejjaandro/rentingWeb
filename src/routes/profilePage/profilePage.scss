@@ -4,7 +4,7 @@
   display: flex;
   height: 100%;
 
-  @include md{
+  @include md {
     flex-direction: column;
     overflow: scroll;
   }
@@ -14,56 +14,61 @@
     overflow-y: scroll;
     padding-bottom: 50px;
 
-    @include md{
-      flex:none;
+    @include md {
+      flex: none;
       height: max-content;
     }
 
-    .wrapper{
+    .wrapper {
       padding-right: 50px;
       display: flex;
       flex-direction: column;
       gap: 50px;
 
-      .title{
+      .title {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        h1{
+        h1 {
           font-weight: 300;
         }
 
-        button{
+        .titleButtons {
+          display: flex;
+          gap: 0.5rem;
+          flex-direction: column;
+
+          .logoutButton {
+            background-color: rgb(231, 3, 3);
+            color: white;
+
+            &:hover {
+              background-color: rgb(150, 5, 5);
+            }
+          }
+        }
+
+        button {
           padding: 12px 24px;
           background-color: #fece51;
           cursor: pointer;
           border: none;
-
-        }
-
-        .logoutButton{
-          background-color: rgb(231, 3, 3);
-          color: white;
-          
-          &:hover{
-            background-color: rgb(150, 5, 5);
-          }
         }
       }
 
-      .info{
+      .info {
         display: flex;
         flex-direction: column;
         gap: 20px;
 
-        span{
+        span {
           display: flex;
           align-items: center;
           gap: 20px;
         }
 
-        img{
+        img {
           width: 40px;
           height: 40px;
           border-radius: 50%;
@@ -72,17 +77,18 @@
       }
     }
   }
+
   .chatContainer {
     flex: 2;
     background-color: #fcf5f3;
     height: 100%;
 
-    @include md{
-      flex:none;
+    @include md {
+      flex: none;
       height: max-content;
     }
 
-    .wrapper{
+    .wrapper {
       height: 100%;
     }
   }

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 function ProfilePage() {
   const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem("user"));
 
   const data = listData;
   const propertiesToSell = data.filter((item) => item.type === "buy");
@@ -14,6 +15,7 @@ function ProfilePage() {
   const logout = () => {
     localStorage.removeItem("user");
     navigate("/");
+    window.location.reload();
   }
 
   return (
@@ -22,8 +24,10 @@ function ProfilePage() {
         <div className="wrapper">
           <div className="title">
             <h1>User Information</h1>
-            <button>Update Profile</button>
-            <button className="logoutButton" onClick={() => logout()}>Logout</button>
+            <div className="titleButtons">
+              <button>Update Profile</button>
+              <button className="logoutButton" onClick={() => logout()}>Logout</button>
+            </div>
           </div>
           <div className="info">
             <span>
@@ -34,10 +38,10 @@ function ProfilePage() {
               />
             </span>
             <span>
-              Username: <b>John Doe</b>
+              Username: <b>{user.username}</b>
             </span>
             <span>
-              E-mail: <b>john@gmail.com</b>
+              E-mail: <b>example@gmail.com</b>
             </span>
           </div>
           <div className="title">

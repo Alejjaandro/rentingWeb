@@ -16,7 +16,7 @@ function Navbar() {
           <span>Renting Web</span>
         </a>
         <a href="/">Home</a>
-        <Link to="/list">Properties</Link>
+        <a href="/list">Properties</a>
         <a href="/">About</a>
         <a href="/">Contact</a>
       </div>
@@ -27,7 +27,7 @@ function Navbar() {
               src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt=""
             />
-            <span>John Doe</span>
+            <span>{user.username}</span>
             <Link to="/profile" className="profile">
               <div className="notification">3</div>
               <span>Profile</span>
@@ -35,8 +35,8 @@ function Navbar() {
           </div>
         ) : (
           <>
-            <Link to="/login">Sign in</Link>
-            <Link to="/register" className="register">Sign up</Link>
+            <a href="/login">Sign in</a>
+            <a href="/register" className="register">Sign up</a>
           </>
         )}
         <div className="menuIcon">
@@ -47,19 +47,18 @@ function Navbar() {
           />
         </div>
         <div className={open ? "menu active" : "menu"}>
-          <a href="/">Home</a>
           {user && (
-            <a href="/profile" className="profile">Profile</a>
+            <a href="/profile" className="menuLogin">Profile</a>
           )}
-
+          <a href="/">Home</a>
           <a href="/list">Properties</a>
           <a href="/">About</a>
           <a href="/">Contact</a>
           
           {!user && (
             <>
-              <a href="/login">Sign in</a>
-              <a href="/register">Sign up</a>
+              <a className="menuLogin" href="/login">Sign in</a>
+              <a className="menuLogin" href="/register">Sign up</a>
             </>
           )}
         </div>
